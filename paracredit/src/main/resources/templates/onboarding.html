@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParaCredit University - Modules</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ParaCredit</span>
+        </a>
+    </div>
+</nav>
+<section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
+        <div class = "text-center">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Welcome to ParaCredit!</h1>
+        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Please fill out the onboarding form below to get started
+        </p>
+        </div>
+            <div class="max-w-3xl mx-auto mt-10">
+            <!-- Stepper navigation -->
+                <div class="mb-6">
+                <ol class="flex items-center">
+                    <li class="flex items-center text-blue-600">
+                        <span class="mr-2">1</span>
+                        Basic Information
+                    </li>
+                    <li class="flex items-center">
+                        <span class="mx-4 h-1 w-8 bg-gray-200"></span>
+                    </li>
+                    <li class="flex items-center text-gray-500">
+                        <span class="mr-2">2</span>
+                        Business Details
+                    </li>
+                    <li class="flex items-center">
+                        <span class="mx-4 h-1 w-8 bg-gray-200"></span>
+                    </li>
+                    <li class="flex items-center text-gray-500">
+                        <span class="mr-2">3</span>
+                        Business Financials
+                    </li>
+                    <li class="flex items-center">
+                        <span class="mx-4 h-1 w-8 bg-gray-200"></span>
+                    </li>
+                    <li class="flex items-center text-gray-500">
+                        <span class="mr-2">4</span>
+                       Credit Information
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Form steps -->
+            <form id="stepper-form" action = "/start-onboarding" method = "POST">
+                <!-- Step 1: Basic Information -->
+                <div id="step-1" class="step active">
+                    <h2 class="text-lg font-semibold mb-4">Basic Information</h2>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Your Full Name</label>
+                            <input type="tel" id="name" name="name" class="block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="mobile" class="block text-sm font-medium text-gray-700">Mobile Number</label>
+                            <input type="tel" id="mobile" name="mobile" class="block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" name="email" class="block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="pan" class="block text-sm font-medium text-gray-700">PAN Number</label>
+                            <input type="text" id="pan" name="pan" class="block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" class="block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="pincode" class="block text-sm font-medium text-gray-700">Pincode</label>
+                            <input type="text" id="pincode" name="pincode" class="block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                            <input type="text" id="city" name="city" class="block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="loan-type" class="block text-sm font-medium text-gray-700">Type of Loan</label>
+                            <select id="loan-type" name="loan-type" class="block w-full border-gray-300 rounded-md shadow-sm">
+                                <option value="business">Business</option>
+                                <option value="personal">Personal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button type="button" class="btn-next bg-blue-600 text-white py-2 px-4 rounded-md">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Business Details -->
+                <div id="step-2" class="step hidden">
+                    <h2 class="text-lg font-semibold mb-4">Business Details</h2>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div>
+                            <label for="business-constitution" class="block text-sm font-medium text-gray-700">Business Constitution</label>
+                            <select id="business-constitution" name="business-constitution" class="block w-full border-gray-300 rounded-md shadow-sm">
+                                <option value="proprietorship">Proprietorship</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="company">Company</option>
+                                <option value="llp">LLP</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="business-name" class="block text-sm font-medium text-gray-700">Business Name</label>
+                            <input type="text" id="business-name" name="business-name" class="block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="registration-year" class="block text-sm font-medium text-gray-700">Year of Registration</label>
+                            <input type="number" id="registration-year" name="registration-year" class="block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="annual-turnover" class="block text-sm font-medium text-gray-700">Annual Turnover</label>
+                            <input type="number" id="annual-turnover" name="annual-turnover" class="block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="nature-of-business" class="block text-sm font-medium text-gray-700">Nature of Business</label>
+                            <select id="nature-of-business" name="nature-of-business" class="block w-full border-gray-300 rounded-md shadow-sm">
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="trading">Trading</option>
+                                <option value="services">Services</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <button type="button" class="btn-prev bg-gray-600 text-white py-2 px-4 rounded-md">Previous</button>
+                        <button type="button" class="btn-next bg-blue-600 text-white py-2 px-4 rounded-md">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Business Financials -->
+                <div id="step-3" class="step hidden">
+                    <h2 class="text-lg font-semibold mb-4">Business Financials</h2>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div>
+                            <label for="revenue" class="block text-sm font-medium text-gray-700">Revenue</label>
+                            <select id="revenue" name="revenue" class="block w-full border-gray-300 rounded-md shadow-sm">
+                                <option value="less-50-lakhs">Less than ₹50 lakhs</option>
+                                <option value="50-lakhs to 1-crore">₹50 lakhs to ₹1 crore</option>
+                                <option value="1 to 5-crores">₹1 crore to ₹5 crores</option>
+                                <option value="more than 5-crores">More than ₹5 crores</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="profit-margin" class="block text-sm font-medium text-gray-700">Profit Margins</label>
+                            <select id="profit-margin" name="profit-margin" class="block w-full border-gray-300 rounded-md shadow-sm">
+                                <option value="Less than 10%">Less than 10%</option>
+                                <option value="10-20%">10-20%</option>
+                                <option value="20-30%">20-30%</option>
+                                <option value="More than 30%">More than 30%</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="cash-flow" class="block text-sm font-medium text-gray-700">Current Cash Flow</label>
+                            <input type="text" id="cash-flow" name="cash-flow" class="block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="existing-debt" class="block text-sm font-medium text-gray-700">Existing Debt</label>
+                            <select id="existing-debt" name="existing-debt" class="block w-full border-gray-300 rounded-md shadow-sm">
+                                <option value="no-debt">No existing debt</option>
+                                <option value="low-debt">Low debt</option>
+                                <option value="moderate-debt">Moderate debt</option>
+                                <option value="high-debt">High debt</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="collateral" class="block text-sm font-medium text-gray-700">Collateral</label>
+                            <select id="collateral" name="collateral" class="block w-full border-gray-300 rounded-md shadow-sm">
+                                <option value="No collateral available-unsecured loan">No collateral available-unsecured loan</option>
+                                <option value="Tangible assets-real estate, machinery, equipment">Tangible assets-real estate, machinery, equipment</option>
+                                <option value="Financial assets-fixed deposits, bonds, shares">Financial assets-fixed deposits, bonds, shares</option>
+                                <option value="Inventory or receivables">Inventory or receivables</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <button type="button" class="btn-prev bg-gray-600 text-white py-2 px-4 rounded-md">Previous</button>
+                        <button type="button" class="btn-next bg-blue-600 text-white py-2 px-4 rounded-md">Next</button>
+                    </div>
+                </div>
+                <!-- Step 4: Credit Requirements -->
+                <div id="step-4" class="step hidden">
+                    <h2 class="text-lg font-semibold mb-4">Credit Requirements</h2>
+                    <div class="grid grid-cols-1 gap-4">
+                        <!-- Purpose of Credit -->
+                        <div>
+                            <label for="purpose" class="block text-sm font-medium text-gray-700">Purpose</label>
+                            <select id="purpose" name="purpose" class="block w-full border-gray-300 rounded-md shadow-sm">
+                                <option value="working-capital">Working capital</option>
+                                <option value="inventory-purchase">Inventory purchase</option>
+                                <option value="expansion">Expansion</option>
+                                <option value="equipment-financing">Equipment financing</option>
+                                <option value="unexpected-expenses">Unexpected expenses</option>
+                                <option value="invoice-financing">Invoice financing</option>
+                            </select>
+                        </div>
+
+                        <!-- Amount Required -->
+                        <div>
+                            <label for="amount-required" class="block text-sm font-medium text-gray-700">Amount Required</label>
+                            <input type="number" id="amount-required" name="amount-required" class="block w-full border-gray-300 rounded-md shadow-sm">
+                        </div>
+
+                        <!-- Repayment Cycle -->
+                        <div>
+                            <label for="repayment-cycle" class="block text-sm font-medium text-gray-700">Repayment Cycle</label>
+                            <select id="repayment-cycle" name="repayment-cycle" class="block w-full border-gray-300 rounded-md shadow-sm">
+                                <option value="Short-term (3-12 months">Short-term (3-12 months)</option>
+                                <option value="Medium-term (1-3 years)">Medium-term (1-3 years)</option>
+                                <option value="Long-term (3+ years)">Long-term (3+ years)</option>
+                                <option value="Revolving credit (continuous access to funds)">Revolving credit (continuous access to funds)</option>
+                            </select>
+                        </div>
+
+                        <!-- Risk Appetite -->
+                        <div>
+                            <label for="risk-appetite" class="block text-sm font-medium text-gray-700">Risk Appetite</label>
+                            <select id="risk-appetite" name="risk-appetite" class="block w-full border-gray-300 rounded-md shadow-sm">
+                                <option value="Low: Prefer secured credit (willing to pledge collateral)">Low: Prefer secured credit (willing to pledge collateral)</option>
+                                <option value="Medium: Open to partial security (combination of secured and unsecured)">Medium: Open to partial security (combination of secured and unsecured)</option>
+                                <option value="High: Prefer unsecured credit (no collateral)">High: Prefer unsecured credit (no collateral)</option>
+                            </select>
+                        </div>
+
+                        <!-- Flexibility -->
+                        <div>
+                            <label for="flexibility" class="block text-sm font-medium text-gray-700">Flexibility</label>
+                            <select id="flexibility" name="flexibility" class="block w-full border-gray-300 rounded-md shadow-sm">
+                                <option value="revolving">Revolving</option>
+                                <option value="fixed-term">Fixed term</option>
+                                <option value="credit-card">Credit Card</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="mt-4 flex justify-between">
+                        <button type="button" class="btn-prev bg-gray-600 text-white py-2 px-4 rounded-md">Previous</button>
+                        <button type="submit" class="bg-green-600 text-white py-2 px-4 rounded-md">Submit</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+    </div>
+</section>
+</body>
+
+        <script>
+            const steps = document.querySelectorAll('.step');
+            let currentStep = 0;
+
+            document.querySelectorAll('.btn-next').forEach((btn) => {
+              btn.addEventListener('click', () => {
+                steps[currentStep].classList.add('hidden');
+                currentStep = (currentStep + 1) % steps.length;
+                steps[currentStep].classList.remove('hidden');
+              });
+            });
+
+            document.querySelectorAll('.btn-prev').forEach((btn) => {
+              btn.addEventListener('click', () => {
+                steps[currentStep].classList.add('hidden');
+                currentStep = (currentStep - 1 + steps.length) % steps.length;
+                steps[currentStep].classList.remove('hidden');
+              });
+            });
+        </script>
+</html>

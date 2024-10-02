@@ -1,0 +1,46 @@
+Sl No.,Bank Name,Scheme Name,Product type,Loan Amount,Tenure,Interest Rate,Processing Fee,Collateral
+1,State Bank of India,SME eBiz Loan,Cash credit,Rs.500 lakh,Based on loan terms,8.2% - 9.1% p.a. + applicable spread,"First year - 1% of sanctioned amount plus taxes
+2nd year onwards - 0.35% plus taxes","At least 35% in the form of land/building, liquid securities, etc."
+2,State Bank of India,Simplified Small Business Loan,Dropline overdraft facility,Rs.25 lakh,12 months to 60 months,8.2% - 9.1% p.a. + applicable spread,-,Minimum 40%
+3,State Bank of India,Standup India,Working Capital or term loan,Rs.1 crore,Up to 7 years (incl. 18-month moratorium),8.2% - 9.1% p.a. + 3.35%,0.20% of loan amount,Not required
+4,State Bank of India,SME Smart Score,Cash credit or term loan,Rs.50 lakh for manufacturing units and Rs.25 lakh for trade and services,Up to 7 years,8.2% - 9.1% p.a. + 2.65%,As per bank's terms and conditions,As per bank's extent norms
+5,State Bank of India,SME Credit Card,Term loan or cash credit,Rs.10 lakh,Up to 7 years,8.2% - 9.1% p.a. + 2.50%,As applicable to SBF and SSI units,"No collateral for SSI but for SBFs, loans over Rs.25,000 will require a collateral/guarantee"
+6,State Bank of India,Doctor Plus,Term loan,Rs.5 crore,Up to 7 years,8.2% - 9.1% p.a. + 2.00% to 2.50%,50% concession on card rates,"No collateral required for loans up to Rs.2 crore. For loans above Rs.2 crore and up to Rs.5 crore, 25% tangible security needs to be provided"
+7,State Bank of India,Medical Equipment Finance,Term loan,Rs.20 crore,Based on equipment type,8.2% - 9.1% p.a. + 2.00% to 2.50%,50% concession on rate cards,"No collateral required for loans up to Rs.2 crore. For loans above Rs.2 crore and up to Rs.20 crore, 25% tangible security needs to be provided"
+8,State Bank of India,E Dealer Finance Scheme,Cash credit,Based on requirement,Up to 90 days,8.2% - 9.1% p.a. + 0.55% to 3.00%,"Rs.10,000 to Rs.30,000",Up to 50% based on the tie-up
+9,State Bank of India,E Vendor Finance Scheme,Cash credit,Based on requirement,As per receivables' tenure,8.2% - 9.1% p.a.,"Rs.10,000 to Rs.50,000",Nil
+10,State Bank of India,Asset-backed loan,Dropline overdraft,Rs.20 crore,12 months to 20 years,8.2% - 9.1% p.a. + 2.30%,1% of the limit,Immovable property in the form of registered or equitable mortgage of land or building
+11,State Bank of India,Fleet Finance,Term Loan,Rs.10 crore,Up to 5.5 years (negotiable),8.2% - 9.1% p.a. + 0.75% to 3.25%,1% of the limit,"No collateral required for loans up to Rs.1 crore. For loans over Rs.1 crore, at least 20% of the tangible asset needs to be provided as collateral"
+12,State Bank of India,PM Mudra Yojana,Working capital and term loan,Up to Rs.10 lakh,3 to 5 years,8.2% - 9.1% p.a. + applicable spread,0.5% of loan amount,Not required
+13,State Bank of India,Export Packing Credit,Working capital,Based on requirement,Up to 180 days,8.2% - 9.1% p.a.,As per working capital/cash credit limits,As per working capital/cash credit limits
+14,State Bank of India,Lease Rental Discounting,Term Loan,Rs.50 crore,Variable (based on lease),8.2% - 9.1% p.a. + 3.10% to 3.60%,As per existing instructions,Equitable mortgage or any other acceptable property
+15,State Bank of India,Open Term Loan,Information Not Available,Information Not Available,Up to 8 years,8.2% - 9.1% p.a. + applicable spread,Information Not Available,Information Not Available
+16,State Bank of India,Warehouse Receipt Finance,Working capital demand loan/cash credit facility/revolving demand loan,Based on requirement and eligibility,12 months (Working Capital Demand Loan),8.2% - 9.1% p.a.,Nil to Rs.3 lakh,"Personal guarantee of directors, partners, etc."
+17,Axis Bank,MSE Power,"Term loan and working capital requirement including letter of credit, rupee export credit, bank guarantee, etc.",Rs.10 lakh to Rs.5 crore,1-5 years,9.5% - 12.5% p.a.,0.25% to 1% of the loan amount,100% of loan amount
+18,Axis Bank,Services Power,"Working capital and term loan requirement including cash credit, letter of credit, inland bill discounting, rupee export credit, etc.",Rs.10 lakh to Rs.5 crore,1-5 years,9.5% - 12.5% p.a.,0.25% to 1% of the loan amount,100% of loan amount
+19,Axis Bank,SME Power,"Working capital and term loan requirements including inland bill discounting, cash credit, bank guarantee, etc.",Rs.10 lakh to Rs.5 crore,1-5 years,9.5% - 12.5% p.a.,0.25% to 1% of the loan amount,125%
+20,Axis Bank,Business MPower Overdraft,Overdraft facility,Rs.10 lakh to Rs.5 crore,Renewable every 12 months,9.5% - 12.0% p.a.,0.50% of the overdraft limit,"Residential, commercial, and industrial property to be provided as collateral"
+21,Axis Bank,Business Mpower Term Loan,Term loan,Rs.10 lakh to Rs.5 crore,1-5 years,9.5% - 13% p.a.,1% of the loan amount,"Residential, commercial, and industrial property to be provided as collateral"
+22,Axis Bank,Power Rent,Term loan,Rs.5 lakh to Rs.20 crore,Renewable yearly,9.75% - 13% p.a.,1% of loan amount,Contracted lease rental receivables
+23,Axis Bank,LCBN Power,Short term loan,Rs.5 lakh to Rs.5 crore,Renewable every 12 months,Based on LC discounting rates,Up to 1% of the loan amount,Nil
+24,Axis Bank,Zero Collateral Loans,Working capital and term loan,Rs.5 lakh to Rs.1 crore,1-5 years,10% - 12.5% p.a.,Up to 1% of the loan amount,-
+25,Axis Bank,Business Loan for Property,Loan for acquiring office space for business,Rs.5 lakh to Rs.5 crore,1-15 years,8.5% - 12.5% p.a.,0.50% to 1% of loan amount,-
+26,Axis Bank,Business Power,Working capital to bank's existing Current Account customers,Rs.10 lakh to Rs.2 crore,Renewable every 12 months,10% - 13% p.a.,1% of the loan amount,Flexible collateral security
+27,Yes Bank,YES Samriddhi,"Fund based - Overdraft, term loan, cash credit, export credit, etc.
+Non-fund based - Buyers credit, letter of credit, bank guarantee",Rs.4 crore,Up to 5 years,9% - 12% p.a.,Up to 1% of the loan amount,Commercial/residential/industrial plot
+28,Yes Bank,Yes Suyog,"Fund based - Working capital demand loan, overdraft, term loan, cash credit, etc.
+Non-fund based - Bank guarantee, buyers' credit, letter of credit,",Rs.2 crore,Up to 5 years,8.5% - 11% p.a.,1% of the loan amount,Industrial/commercial/residential/NA plot/surrender value of LIC/FD/BG
+29,Yes Bank,Smart Overdraft,Dropline overdraft and overdraft,Rs.1 crore,"1 year, renewable",9% - 12% p.a.,0.5% of overdraft limit,Industrial/commercial/residential/NA plot/surrender value of LIC/FD/BG
+30,Yes Bank,Cash Backed Lending Program,"Non-fund based - Bank guarantee, letter of credit, buyers' credit",-,Up to 3 years,Based on cash deposit interest,Up to 0.50% of loan amount,-
+31,Yes Bank,Channel Finance,Working capital,-,"90-180 days, as per receivable",9.25% - 12.5% p.a.,0.25% of loan amount,-
+32,Yes Bank,YES GST,Overdraft based on GST returns,Rs.1 crore,Up to 5 years,8.5% - 12% p.a.,Up to 1% of the loan amount,-
+33,Karur Vysya Bank,KVB MSME Cash,"Short term loan, open cash credit, etc.","OCC - 25% on stocks, 40% on receivables
+SOD - At least 40% on immovable property
+STL - 25%",1-3 years,Linked to credit score and rating,Up to 1% of the loan amount,Current assets
+34,Karur Vysya Bank,KVB MSME Term Loan,Short or medium-term loan,20% for machinery and 40% for building,3-7 years,Linked to credit score and rating,0.50%-1% of the loan amount,Immovable assets
+35,Karur Vysya Bank,KVB MSME Vendor Bill Discounting,Bill discounting,15%,Varies (depending on bill cycle),Linked to credit score and rating,Varies based on bill value,75% of immovable assets
+36,Karur Vysya Bank,KVB MSME Easy Loan,Loans to existing services and manufacturing units with a turnover of below Rs.100 lakh,"LC/BG - 15% cash margin
+OCC - 40% on receivables, 25% on stocks
+HPL(M) - 50% on old machinery, 20% on new machinery
+SOD-RE - 33.33% on primary security",1-5 years,Linked to credit score and rating,0.50%-1% of the loan amount,Current Assets
+37,Karur Vysya Bank,KVB Micro Plus,Loans for microenterprises,-,1-5 years,Linked to credit score and rating,0.50%-1% of the loan amount,125% for immovable properties and 100% for liquid securities

@@ -1,16 +1,15 @@
-<html>
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | ParaCredit</title>
+    <title>Compare | ParaCredit</title>
     <script src="https://unpkg.com/htmx.org@1.8.4"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
@@ -64,7 +63,48 @@
         </ul>
     </div>
 </aside>
+<div class="p-4 sm:ml-64">
 
+<!-- comparison-result.html -->
+                    <!-- Flex container to split content into two sections -->
+    <div id="comparison-result" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div th:each="product : ${loanSchemes}" class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg w-full h-48 object-cover" src="https://i.ibb.co/b28JWHw/placeholder.png" th:alt="${product.productType + ' image'}">
+                            </a>
+                            <h5 th:text="${product.schemeName}" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></h5>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                <span class="font-semibold">Bank: </span>
+                                <span th:text="${product.bankName}"></span>
+                            </p>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                <span class="font-semibold">Max Loan:</span>
+                                <span th:text="${product.loanAmount}"></span>
+                            </p>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                <span class="font-semibold">Interest Rate:</span>
+                                <span th:text="${product.interestRate}"></span>
+                            </p>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                <span class="font-semibold">Processing Fee:</span>
+                                <span th:text="${product.processingFee}"></span>
+                            </p>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                <span class="font-semibold">Collateral:</span>
+                                <span th:text="${product.collateral}"></span>
+                            </p>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                <span class="font-semibold">Max Tenure:</span>
+                                <span th:text="${product.tenure}"></span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 </body>
 </html>

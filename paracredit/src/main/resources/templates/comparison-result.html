@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+<!-- comparison-result.html -->
+<div id="comparison-result" class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+    <div class="w-full pr-4">
+        <div id="CreditOptionContainer">
+            <ul class="space-y-4">
+                <li th:each="comparison : ${comparisonList}" class="fade-in">
+                    <h2 class="font-bold" th:text="${comparison.creditOption}"></h2><br>
+
+                    <!-- Flex container to arrange two sections side by side -->
+                    <div class="flex space-x-6">
+                        <!-- First Section (left column) -->
+                        <div class="flex-1">
+                            <div class="p-6 bg-white shadow-md fade-in">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Interest Rate</h5>
+                                <p th:text="${comparison.creditScore}" class="text-4xl font-extrabold text-green-900"></p>
+                            </div>
+                            <div class="p-6 bg-white shadow-md fade-in">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Eligible Credit Score</h5>
+                                <p th:text="${comparison.maxLoanAmount}" class="text-4xl font-extrabold text-gray-900"></p>
+                            </div>
+                            <div class="p-6 bg-white shadow-md fade-in">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Suitability Score</h5>
+                               <hr>
+                                <p th:text="${comparison.suitabilityScore}+'/10'" class="text-4xl font-extrabold text-blue-900"></p>
+                                <p th:text="${comparison.eligibilityScore}" class="text font-extrabold text-gray-900"></p>
+
+                            </div>
+                        </div>
+
+                        <!-- Vertical line -->
+                        <div class="w-px bg-gray-300"></div>
+
+                        <!-- Second Section (right column) -->
+                        <div class="flex-1">
+                            <div class="p-6 bg-white shadow-md fade-in">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Min-Max Loan Amount</h5>
+                                <p th:text="${comparison.loanTenure}" class="text-4xl font-extrabold text-red-900"></p>
+                            </div>
+                            <div class="p-6 bg-white shadow-md fade-in">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Loan Tenure</h5>
+                                <p th:text="${comparison.interestRate}" class="text-4xl font-extrabold text-blue-900"></p>
+                            </div>
+                            <div class="p-6 bg-white shadow-md fade-in">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Eligibility Score</h5>
+                                <hr>
+                                <p th:text="${comparison.reasonForSuitability}+'/10'" class="text-4xl font-extrabold text-green-900"></p><br>
+                                <p th:text="${comparison.reasonForEligibility}" class="text font-extrabold text-gray-900"></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const items = document.querySelectorAll('.fade-in');
+        items.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add('visible');
+            }, index * 300); // Delay each item by 300ms
+        });
+    });
+</script>
+
+</div>
+</body>
+</html>

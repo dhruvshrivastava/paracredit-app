@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | ParaCredit</title>
+    <title>Compare | ParaCredit</title>
     <script src="https://unpkg.com/htmx.org@1.8.4"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -64,6 +65,52 @@
         </ul>
     </div>
 </aside>
+
+<div class="p-4 sm:ml-64">
+<!-- Form Container -->
+<form class="bg-white p-6 rounded-lg shadow-lg w-full h-1/2"
+      method="POST"
+      hx-post="/compareResult"
+      hx-target="#comparison-result"
+      hx-swap="outerHTML">
+    <!-- Dropdown 1: Credit Option 1 -->
+    <div class="flex flex-wrap space-x-4 mb-4">
+        <!-- Dropdown 1: Credit Option 1 -->
+
+        <div class="flex-1" >
+            <label for="credit-option-1" class="block mb-2 text-sm font-medium text-gray-900">Choose Credit Option 1</label>
+            <select id="credit-option-1" name="credit-option-1" class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                <div th:each="loan : ${loanSchemes}">
+                    <option th:text="${loan.productType}" th:value="${loan.productType}"></option>
+                </div>
+            </select>
+        </div>
+
+        <!-- Dropdown 2: Credit Option 2 -->
+        <div class="flex-1">
+            <label for="credit-option-2" class="block mb-2 text-sm font-medium text-gray-900">Choose Credit Option 2</label>
+            <select id="credit-option-2" name="credit-option-2" class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                <div th:each="loan : ${loanSchemes}">
+                <option th:text="${loan.productType}" th:value="${loan.productType}"></option>
+                </div>
+            </select>
+        </div>
+            </div>
+
+
+
+    <!-- Submit Button -->
+    <div class="text-center">
+        <button type="submit" class="w-full bg-blue-500 text-white py-2.5 rounded-lg hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 focus:outline-none transition-all">
+            Compare Now
+        </button>
+    </div>
+</form>
+    <!-- Result Container -->
+    <div id="comparison-result" class="mt-6">
+        <!-- Comparison result will be updated here -->
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 </body>

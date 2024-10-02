@@ -1,16 +1,15 @@
-<html>
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | ParaCredit</title>
+    <title>Compare | ParaCredit</title>
     <script src="https://unpkg.com/htmx.org@1.8.4"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
@@ -64,6 +63,105 @@
         </ul>
     </div>
 </aside>
+
+<div class="p-4 sm:ml-64">
+
+    <div class="mb-6 p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <div th:each="requirement : ${requirement}">
+                <h3 class="text-lg font-semibold mb-2 text-red-800 dark:text-gray-200">Requirements</h3>
+                <ul class="list-disc list-inside text-gray-700 dark:text-gray-400">
+                    <li th:text="${requirement.requirement1}"></li>
+                    <li th:text="${requirement.requirement2}"></li>
+                    <li th:text="${requirement.requirement3}"></li>
+                    <li th:text="${requirement.requirement4}"></li>
+                    <li th:text="${requirement.requirement5}"></li>
+
+                </ul>
+                </div>
+            </div>
+            <div>
+                <div th:each="goal : ${goal}">
+                    <h3 class="text-lg font-semibold mb-2 text-green-800 dark:text-gray-200">Goals</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-400">
+                        <li th:text="${goal.goal1}"></li>
+                        <li th:text="${goal.goal2}"></li>
+                        <li th:text="${goal.goal3}"></li>
+                        <li th:text="${goal.goal4}"></li>
+                        <li th:text="${goal.goal5}"></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Toggle buttons section -->
+    <div class="mb-4 flex space-x-4">
+        <button
+                class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                hx-get="/recommended"
+                hx-target="#comparison-result"
+                hx-swap="outerHTML">
+            Recommended
+        </button>
+        <button
+                class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                hx-get="/meets-requirements"
+                hx-target="#comparison-result"
+                hx-swap="outerHTML">
+            Meets Requirements
+        </button>
+        <button
+                class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                hx-get="/meets-goals"
+                hx-target="#comparison-result"
+                hx-swap="outerHTML">
+            Meets Goals
+        </button>
+    </div>
+
+
+
+    <!-- Comparison Results -->
+    <div id="comparison-result" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div th:each="product : ${loanProducts}" class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+           <label th:text="${product.tooltip}" class = "bg-green border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"></label>
+            <a href="#">
+                <img class="rounded-t-lg w-full h-48 object-cover" src="https://i.ibb.co/b28JWHw/placeholder.png" th:alt="${product.productType + ' image'}">
+            </a>
+            <h5 th:text="${product.productType}" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <span class="font-semibold">Eligibility:</span>
+                <span th:text="${product.eligibilityCriteria}"></span>
+            </p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <span class="font-semibold">Max Loan:</span>
+                <span th:text="${product.maxLoanAmount}"></span>
+            </p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <span class="font-semibold">Interest Rate:</span>
+                <span th:text="${product.interestRate}"></span>
+            </p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <span class="font-semibold">Processing Fee:</span>
+                <span th:text="${product.processingFee}"></span>
+            </p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <span class="font-semibold">Collateral:</span>
+                <span th:text="${product.collateral}"></span>
+            </p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <span class="font-semibold">Max Tenure:</span>
+                <span th:text="${product.maxTenure}"></span>
+            </p>
+            <a th:href="'/'+${product.productType}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                View more details
+                <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 </body>

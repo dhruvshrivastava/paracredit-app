@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Article | ParaCredit</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ParaCredit University</span>
+        </a>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a href="/university/index" class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="/university/modules" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Modules</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Negotiating Loan Terms</h2>
+            <p class="mb-4 font-light">Negotiating loan terms is a critical skill for Indian Micro, Small, and Medium Enterprises (MSMEs) seeking financial assistance.<br> Understanding how to effectively negotiate can lead to better loan conditions, which can significantly impact an MSME’s financial health and growth potential.<br><br>
+
+                Know Your Requirements<br>
+                Before entering negotiations, it is essential for MSMEs to clearly define their financing needs.<br> This includes determining the amount needed, the purpose of the loan, and the repayment timeline.<br> Having a well-prepared business plan can provide a strong foundation for discussions with lenders.<br><br>
+
+                Research Lender Options<br>
+                Different lenders may offer varying loan terms, interest rates, and conditions.<br> MSMEs should research multiple lending options, including banks, non-banking financial companies (NBFCs), and government schemes.<br> Comparing these options can provide leverage during negotiations and help identify the best deal.<br><br>
+
+                Understand Interest Rates<br>
+                Interest rates significantly impact the overall cost of borrowing.<br> MSMEs should be aware of current market rates and aim to negotiate lower rates by demonstrating strong financial performance or providing collateral.<br> Fixed and floating rates each have their pros and cons, and understanding these can aid in making informed choices.<br><br>
+
+                Discuss Repayment Flexibility<br>
+                MSMEs should seek flexibility in repayment terms, such as extended repayment periods or grace periods before payments begin.<br> This flexibility can help businesses manage cash flow effectively, especially during periods of low revenue.<br><br>
+
+                Negotiate Fees and Charges<br>
+                Beyond interest rates, MSMEs should inquire about any additional fees or charges associated with the loan.<br> Negotiating to waive or reduce these costs can lead to significant savings over the loan’s lifespan.<br><br>
+
+                In conclusion, negotiating loan terms is a vital process for Indian MSMEs that can result in more favorable financing conditions.<br> By clearly defining their needs, researching lenders, understanding interest rates, discussing repayment flexibility, and negotiating fees, MSMEs can secure loans that better align with their financial capabilities and growth ambitions.<br> Empowering themselves through negotiation can pave the way for long-term success and sustainability. </p>
+        </div>
+    </div>
+</section>
+<!-- Toggle Button at the Bottom Left -->
+<button id="chat-toggle"
+        class="fixed bottom-5 left-5 bg-blue-500 text-white p-3 rounded-full shadow-lg focus:outline-none hover:bg-blue-600 transition-all">
+    Ask a question
+</button>
+
+<!-- Chat Widget -->
+<div id="chat-widget"
+     class="fixed bottom-20 left-5 w-80 bg-white shadow-lg rounded-lg hidden">
+    <div class="p-4 bg-blue-500 text-white rounded-t-lg">
+        <h2 class="text-lg font-semibold">Ask a question</h2>
+    </div>
+    <div class="p-4 h-60 overflow-y-auto">
+        <p class="text-gray-700 text-sm">Feel free to ask questions and clarify any doubts</p>
+    </div>
+    <div class="p-4 bg-gray-100 rounded-b-lg">
+        <input type="text" placeholder="Type your query"
+               class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+</div>
+
+<script>
+    // JavaScript to toggle the chat widget
+    const chatToggleButton = document.getElementById('chat-toggle');
+    const chatWidget = document.getElementById('chat-widget');
+
+    chatToggleButton.addEventListener('click', () => {
+        chatWidget.classList.toggle('hidden');
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+</body>
+</html>

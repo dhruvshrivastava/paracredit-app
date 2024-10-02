@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Widget</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- Toggle Button at the Bottom Left -->
+<button id="chat-toggle"
+        class="fixed bottom-5 left-5 bg-blue-500 text-white p-3 rounded-full shadow-lg focus:outline-none hover:bg-blue-600 transition-all">
+    Chat
+</button>
+
+<!-- Chat Widget -->
+<div id="chat-widget"
+     class="fixed bottom-20 left-5 w-80 bg-white shadow-lg rounded-lg hidden">
+    <div class="p-4 bg-blue-500 text-white rounded-t-lg">
+        <h2 class="text-lg font-semibold">Ask a question</h2>
+    </div>
+    <div class="p-4 h-60 overflow-y-auto">
+        <p class="text-gray-700 text-sm">Feel free to ask questions and clarify any doubts</p>
+    </div>
+    <div class="p-4 bg-gray-100 rounded-b-lg">
+        <input type="text" placeholder="Type your query"
+               class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+</div>
+
+<script>
+    // JavaScript to toggle the chat widget
+    const chatToggleButton = document.getElementById('chat-toggle');
+    const chatWidget = document.getElementById('chat-widget');
+
+    chatToggleButton.addEventListener('click', () => {
+        chatWidget.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>
